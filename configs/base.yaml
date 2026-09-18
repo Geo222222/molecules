@@ -1,0 +1,39 @@
+seed: 42
+data:
+  path: data/MassSpecGym1.5.tsv
+  max_peaks: 96
+  max_smiles_tokens: 192
+  intensity_power: 0.5
+  min_relative_intensity: 0.001
+model:
+  d_model: 256
+  nhead: 8
+  encoder_layers: 6
+  decoder_layers: 6
+  dim_feedforward: 1024
+  dropout: 0.1
+  max_peaks: 96
+  max_smiles_tokens: 192
+  fingerprint_bits: 512
+training:
+  batch_size: 64
+  epochs: 30
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  label_smoothing: 0.05
+  fingerprint_loss_weight: 0.15
+  formula_dropout: 0.50
+  grad_clip: 1.0
+  num_workers: 4
+  amp: true
+  checkpoint_dir: artifacts/checkpoints
+decoding:
+  beam_size: 20
+  max_length: 192
+  top_k: 10
+  mass_tolerance_ppm: 10.0
+  require_formula_match_when_available: false
+  score_weights:
+    sequence: 1.0
+    fingerprint: 1.5
+    mass: 0.25

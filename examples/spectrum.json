@@ -1,0 +1,9 @@
+{
+  "mzs": [91.0542, 125.0233, 154.0499, 185.0961, 229.0859, 246.1125],
+  "intensities": [0.2452, 1.0, 0.0801, 0.3493, 0.1421, 0.7347],
+  "precursor_mz": 288.1225,
+  "adduct": "[M+H]+",
+  "instrument_type": "Orbitrap",
+  "collision_energy": 30.0,
+  "formula": "C16H17NO4"
+}

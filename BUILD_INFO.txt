@@ -1,0 +1,4 @@
+LCMS2SMILES build
+version=0.1.0
+source_archive_sha256=3d4c8f3464b23a5e2356e30409262925efd87e386d5704c2391868f0b2041be3
+local_tests=5 passed
